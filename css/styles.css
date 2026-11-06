@@ -1973,6 +1973,119 @@ html.light .bento-card:hover .bento-card__badge {
 }
 
 /* ==========================================================================
+   Integrations Section (#integrations — PulpSense Signature Squircle Marquee)
+   ========================================================================== */
+
+.integrations-section {
+  padding: var(--space-20) 0;
+  position: relative;
+  background-color: var(--bg-main);
+  border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .integrations-section {
+    padding: var(--space-24) 0;
+  }
+}
+
+.tools-marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: var(--space-6) 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%);
+}
+
+.tools-marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+}
+
+.tool-tile {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  color: #94a3b8;
+  cursor: pointer;
+  position: relative;
+}
+
+.tool-tile:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #f8fafc;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 255, 255, 0.08);
+}
+
+.tool-tile svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.integrations-footer {
+  text-align: center;
+  margin-top: var(--space-8);
+  padding: 0 var(--space-4);
+}
+
+.integrations-footer__text {
+  font-size: 0.9rem;
+  color: var(--color-primary-muted);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Light mode for integrations */
+html.light .integrations-section {
+  border-top-color: rgba(0, 0, 0, 0.06);
+}
+
+html.light .tool-tile {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #475569;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+html.light .tool-tile:hover {
+  background: #ffffff;
+  border-color: rgba(112, 71, 235, 0.35);
+  color: #0f172a;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 0 0 16px rgba(112, 71, 235, 0.12);
+}
+
+@media (max-width: 640px) {
+  .tool-tile {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+  }
+  .tool-tile svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* ==========================================================================
    FAQ Section (Task 8 - Interactive Accordion)
    ========================================================================== */
 
