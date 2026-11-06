@@ -1,0 +1,4 @@
+# Temporary inspection scripts and cache
+scratch/
+.DS_Store
+Thumbs.db

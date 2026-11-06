@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VeKtra Automation — Soluciones de automatización industrial, control y optimización de procesos.">
+  <title>VeKtra Automation | Soluciones de Automatización</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Immediate Theme Initializer (prevents flash of dark/light theme) -->
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem("vektra-theme");
+        if (saved === "light") {
+          document.documentElement.classList.add("light");
+        } else {
+          document.documentElement.classList.remove("light");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Ambient vertical guide lines (PulpSense / Magic UI design signature) -->
+    <div class="guide-line guide-line--left" aria-hidden="true"></div>
+    <div class="guide-line guide-line--right" aria-hidden="true"></div>
+
+    <!-- Header / Navigation (Floating Capsule) -->
+    <header class="header-floating" id="header">
+      <div class="header-floating__inner">
+        <!-- Brand Logo -->
+        <a href="#hero" class="brand-logo" aria-label="VeKtra Automation — Inicio">
+          <img src="assets/images/vektra-logo.png" alt="VeKtra Automation" class="brand-logo__img">
+        </a>
+
+        <!-- Desktop Navigation Pill -->
+        <nav class="nav__desktop" aria-label="Navegación principal de escritorio">
+          <ul class="nav__list">
+            <li><a href="#services" class="nav__link">Automatización</a></li>
+            <li><a href="#ai-seo" class="nav__link">IA SEO</a></li>
+            <li><a href="#web-presence" class="nav__link">Desarrollo Web</a></li>
+            <li><a href="#case-studies" class="nav__link">Casos de Éxito</a></li>
+            <li><a href="#process" class="nav__link">Cómo Trabajamos</a></li>
+            <li><a href="#faq" class="nav__link">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Actions: Theme Toggle, CTA & Mobile Toggle -->
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar a modo día" type="button">
+            <!-- Sun icon (shown in dark mode) -->
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <!-- Moon icon (shown in light mode) -->
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+
+          <a href="#book-call" class="btn btn--primary btn--sm">Agendar Llamada</a>
+          
+          <button class="nav__toggle" aria-expanded="false" aria-label="Abrir menú de navegación" aria-controls="nav-mobile">
+            <svg class="nav__toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Drawer -->
+      <div class="nav__mobile" id="nav-mobile" aria-label="Navegación móvil">
+        <ul class="nav__mobile-list">
+          <li><a href="#services" class="nav__mobile-link"><span>Automatización de Procesos</span> <span>→</span></a></li>
+          <li><a href="#ai-seo" class="nav__mobile-link"><span>IA SEO (Google & ChatGPT)</span> <span>→</span></a></li>
+          <li><a href="#web-presence" class="nav__mobile-link"><span>Desarrollo Web & Landing Pages</span> <span>→</span></a></li>
+          <li><a href="#case-studies" class="nav__mobile-link"><span>Casos de Éxito</span> <span>→</span></a></li>
+          <li><a href="#process" class="nav__mobile-link"><span>Cómo Trabajamos</span> <span>→</span></a></li>
+          <li><a href="#faq" class="nav__mobile-link"><span>Preguntas Frecuentes</span> <span>→</span></a></li>
+        </ul>
+        <a href="#book-call" class="btn btn--primary nav__mobile-cta">Agendar Sesión Estratégica</a>
+      </div>
+    </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content">
+    <!-- Hero Section (PulpSense / Magic UI Layout) -->
+    <section class="hero reveal-on-scroll" id="hero">
+      <div class="hero__gradient" aria-hidden="true"></div>
+
+      <div class="container hero__container">
+        <!-- Badge Pill -->
+        <div class="badge-pill hero__badge">
+          <span class="badge-pill__dot"></span>
+          <span>⚡ Automatización de Procesos con IA</span>
+        </div>
+
+        <!-- Main Title & Subtitle -->
+        <h1 class="hero__title">
+          Deja de contratar para tareas<br>
+          que la IA puede resolver.
+        </h1>
+        <p class="hero__subtitle">
+          Automatizamos tus operaciones críticas y ventas para que escales tu negocio <span class="hero__highlight">sin inflar tu nómina<svg class="hero__underline-svg" viewBox="0 0 240 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 8.5C60 2.5 180 2.5 237 8.5" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/></svg></span>.
+        </p>
+
+        <!-- Dual CTA Buttons (Matching Reference: Secondary Left, Primary Violet Right) -->
+        <div class="hero__actions">
+          <a href="#services" class="btn btn--secondary">Explorar Soluciones</a>
+          <a href="#book-call" class="btn btn--primary">
+            <span>Agendar Llamada</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Social Proof (Avatars + 5 Stars Rating) -->
+        <div class="hero__social-proof">
+          <div class="avatar-cluster" aria-hidden="true">
+            <!-- Vector Avatar 1 -->
+            <div class="avatar-item" style="background: linear-gradient(135deg, #6366f1, #7c3aed);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" opacity="0.9"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+            </div>
+            <!-- Vector Avatar 2 -->
+            <div class="avatar-item" style="background: linear-gradient(135deg, #8b5cf6, #d946ef);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" opacity="0.9"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+            </div>
+            <!-- Vector Avatar 3 -->
+            <div class="avatar-item" style="background: linear-gradient(135deg, #0ea5e9, #6366f1);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" opacity="0.9"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+            </div>
+            <!-- Vector Avatar 4 -->
+            <div class="avatar-item" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" opacity="0.9"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+            </div>
+            <!-- Counter Pill -->
+            <div class="avatar-item avatar-item--count">+93</div>
+          </div>
+
+          <!-- 5 Stars -->
+          <div class="rating-stars" role="img" aria-label="Calificación 5 de 5 estrellas">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="social-proof__caption">Confiado por más de 100 empresas y fundadores B2B</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack & Partners Marquee Section (PulpSense / Magic UI Signature) -->
+    <section class="marquee-section reveal-on-scroll" id="social-proof" aria-label="Tecnologías e integraciones que dominamos">
+      <p class="marquee-section__label">Ecosistema & Tecnologías que Integramos</p>
+      
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Loop 1 -->
+          <div class="tech-logo">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span class="tech-logo__name">n8n Automation</span>
+          </div>
+          <div class="tech-logo">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M6 12h12"/></svg>
+            <span class="tech-logo__name">Make.com</span>
+          </div>
+          <div class="tech-logo">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22.28 9.87c-.16-.94-.58-1.81-1.22-2.5-1.04-1.12-2.53-1.68-4.06-1.54-.51-.97-1.32-1.76-2.31-2.26-1.57-.79-3.41-.75-4.94.11-1.01.57-1.82 1.45-2.29 2.51-1.04.14-2.02.63-2.77 1.38-1.19 1.18-1.74 2.89-1.48 4.54.16.94.58 1.81 1.22 2.5 1.04 1.12 2.53 1.68 4.06 1.54.51.97 1.32 1.76 2.31 2.26 1.57.79 3.41.75 4.94-.11 1.01-.57 1.82-1.45 2.29-2.51 1.04-.14 2.02-.63 2.77-1.38 1.19-1.18 1.74-2.89 1.48-4.54z"/></svg>
+            <span class="tech-logo__name">OpenAI</span>
+          </div>
+          <div class="tech-logo">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7 12h10M12 7v10"/></svg>
+            <span class="tech-logo__name">Claude AI</span>
+          </div>
+          <div class="tech-logo">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span class="tech-logo__name">Supabase</span>
+          </div>
+          <div class="tech-logo">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L2 8.5v7L12 21l10-5.5v-7L12 3zm0 2.2l7.6 4.2L12 13.6 4.4 9.4 12 5.2z"/></svg>
+            <span class="tech-logo__name">Airtable</span>
+          </div>
+          <div class="tech-logo">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+            <span class="tech-logo__name">HubSpot CRM</span>
+          </div>
+          <div class="tech-logo">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 9.5 12 17l10-7.5L12 2zm0 18.5l-8-6v2l8 6 8-6v-2l-8 6z"/></svg>
+            <span class="tech-logo__name">Python</span>
+          </div>
+          <div class="tech-logo">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M8 10h8M8 14h5"/></svg>
+            <span class="tech-logo__name">PostgreSQL</span>
+          </div>
+          <div class="tech-logo">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6 10h4v10H6zm8-6h4v16h-4z"/></svg>
+            <span class="tech-logo__name">WhatsApp Business API</span>
+          </div>
+
+          <!-- Loop 2 (Duplicate for continuous 60fps loop) -->
+          <div class="tech-logo" aria-hidden="true">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span class="tech-logo__name">n8n Automation</span>
+          </div>
+          <div class="tech-logo" aria-hidden="true">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M6 12h12"/></svg>
+            <span class="tech-logo__name">Make.com</span>
+          </div>
+          <div class="tech-logo" aria-hidden="true">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22.28 9.87c-.16-.94-.58-1.81-1.22-2.5-1.04-1.12-2.53-1.68-4.06-1.54-.51-.97-1.32-1.76-2.31-2.26-1.57-.79-3.41-.75-4.94.11-1.01.57-1.82 1.45-2.29 2.51-1.04-.14 2.02-.63 2.77-1.38 1.19-1.18 1.74-2.89 1.48-4.54z"/></svg>
+            <span class="tech-logo__name">OpenAI</span>
+          </div>
+          <div class="tech-logo" aria-hidden="true">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7 12h10M12 7v10"/></svg>
+            <span class="tech-logo__name">Claude AI</span>
+          </div>
+          <div class="tech-logo" aria-hidden="true">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span class="tech-logo__name">Supabase</span>
+          </div>
+          <div class="tech-logo" aria-hidden="true">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L2 8.5v7L12 21l10-5.5v-7L12 3zm0 2.2l7.6 4.2L12 13.6 4.4 9.4 12 5.2z"/></svg>
+            <span class="tech-logo__name">Airtable</span>
+          </div>
+          <div class="tech-logo" aria-hidden="true">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+            <span class="tech-logo__name">HubSpot CRM</span>
+          </div>
+          <div class="tech-logo" aria-hidden="true">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 9.5 12 17l10-7.5L12 2zm0 18.5l-8-6v2l8 6 8-6v-2l-8 6z"/></svg>
+            <span class="tech-logo__name">Python</span>
+          </div>
+          <div class="tech-logo" aria-hidden="true">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M8 10h8M8 14h5"/></svg>
+            <span class="tech-logo__name">PostgreSQL</span>
+          </div>
+          <div class="tech-logo" aria-hidden="true">
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6 10h4v10H6zm8-6h4v16h-4z"/></svg>
+            <span class="tech-logo__name">WhatsApp Business API</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI SEO & Search Discovery Section (PulpSense Signature Feature) -->
+    <section class="ai-seo-section reveal-on-scroll" id="ai-seo" aria-labelledby="ai-seo-heading">
+      <div class="container">
+        <!-- 2-Column Showcase Grid -->
+        <div class="ai-seo-grid">
+          <!-- Left Column: Copy & Value Proposition -->
+          <div class="ai-seo__content">
+            <div class="badge-pill ai-seo__badge">
+              <span class="badge-pill__dot"></span>
+              <span>🔎 IA SEO</span>
+            </div>
+            <h2 id="ai-seo-heading" class="ai-seo__title">
+              Posiciónate en Google y ChatGPT
+            </h2>
+            <p class="ai-seo__description">
+              Convierte búsquedas en clientes potenciales. Ayudamos a empresas de servicios y negocios B2B a ser descubiertos en Google Maps, búsqueda orgánica y recomendaciones de Inteligencia Artificial.
+            </p>
+            <ul class="ai-seo__checklist">
+              <li class="ai-seo__checklist-item">
+                <svg class="ai-seo__check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Consultas directas</span>
+              </li>
+              <li class="ai-seo__checklist-item">
+                <svg class="ai-seo__check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Sin gasto obligatorio en anuncios</span>
+              </li>
+            </ul>
+            <a href="#book-call" class="btn--white">
+              <span>Habla con nosotros sobre IA SEO</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+
+          <!-- Right Column: Interactive Visibility Scene (Mockup) -->
+          <figure class="visibility-scene" aria-label="Ilustración interactiva de descubrimiento en Google Maps, búsqueda orgánica y modelos de IA">
+            <div class="scene-label">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Más formas de descubrirte</span>
+            </div>
+
+            <!-- Radar Map Vector Canvas -->
+            <div class="map-canvas" aria-hidden="true">
+              <svg viewBox="0 0 540 490" fill="none" class="map-art">
+                <defs>
+                  <pattern id="visibility-blocks" width="96" height="88" patternUnits="userSpaceOnUse" patternTransform="rotate(-18 270 245)">
+                    <rect x="12" y="12" width="64" height="55" rx="9" fill="currentColor" opacity=".04"></rect>
+                    <path d="M0 82H96M88 0V88" stroke="currentColor" stroke-width="2" opacity=".07"></path>
+                  </pattern>
+                  <radialGradient id="visibility-radius">
+                    <stop stop-color="var(--color-secondary)" stop-opacity=".15"></stop>
+                    <stop offset="1" stop-color="var(--color-secondary)" stop-opacity="0"></stop>
+                  </radialGradient>
+                </defs>
+                <rect width="540" height="490" fill="url(#visibility-blocks)"></rect>
+                <path d="M-50 355C110 315 65 135 270 170S420 360 610 235" stroke="currentColor" stroke-opacity=".04" stroke-width="44"></path>
+                <path d="M-50 355C110 315 65 135 270 170S420 360 610 235" stroke="currentColor" stroke-opacity=".1" stroke-width="2" stroke-dasharray="7 9"></path>
+                <circle cx="278" cy="244" r="182" fill="url(#visibility-radius)"></circle>
+                <circle cx="278" cy="244" r="143" stroke="var(--color-secondary)" stroke-opacity=".2" stroke-dasharray="4 7"></circle>
+                <circle cx="278" cy="244" r="91" stroke="var(--color-secondary)" stroke-opacity=".3"></circle>
+                <path d="M136 145Q173 219 278 244M431 160Q383 230 278 244M132 353Q191 283 278 244M428 357Q381 279 278 244" stroke="var(--color-secondary)" stroke-opacity=".22" stroke-width="1.5" stroke-dasharray="4 5"></path>
+                <g fill="var(--color-secondary)">
+                  <circle cx="136" cy="145" r="5"></circle>
+                  <circle cx="431" cy="160" r="5"></circle>
+                  <circle cx="132" cy="353" r="5"></circle>
+                  <circle cx="428" cy="357" r="5"></circle>
+                </g>
+                <g fill="var(--color-secondary)" fill-opacity=".12">
+                  <circle cx="136" cy="145" r="13"></circle>
+                  <circle cx="431" cy="160" r="13"></circle>
+                  <circle cx="132" cy="353" r="13"></circle>
+                  <circle cx="428" cy="357" r="13"></circle>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Card 1: Local Search Snippet (Top Left) -->
+            <div class="search-snippet">
+              <div class="snippet-heading">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <span>Búsqueda local</span>
+              </div>
+              <div class="snippet-content">
+                <div class="business-avatar" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="snippet-info">
+                  <strong>Tu empresa</strong>
+                  <div class="rating-stars" role="img" aria-label="5 de 5 estrellas">
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  </div>
+                </div>
+                <svg class="snippet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="skeleton-line" aria-hidden="true"></div>
+              <div class="skeleton-line skeleton-line--short" aria-hidden="true"></div>
+            </div>
+
+            <!-- Pulsing Center Business Pin -->
+            <div class="map-business" aria-hidden="true">
+              <div class="map-pin">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+            </div>
+
+            <!-- Card 2: AI Discovery Snippet (Bottom Right) -->
+            <div class="ai-snippet">
+              <div class="snippet-heading">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                <span>Descubrimiento por IA</span>
+              </div>
+              <strong>Sé parte de la respuesta.</strong>
+              <p>Contenido claro. Presencia consistente. Reputación en la que las personas y los modelos confían.</p>
+              <div class="source-chips">
+                <span>Sitio Web</span>
+                <span>Directorios</span>
+                <span>Reseñas</span>
+              </div>
+            </div>
+
+            <!-- Bottom Tabs Legend -->
+            <figcaption class="scene-caption">
+              <span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                Maps
+              </span>
+              <span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                Búsqueda
+              </span>
+              <span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                IA
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- 4 Pillars: Behind your visibility -->
+        <div class="ai-seo-pillars">
+          <p class="ai-seo-pillars__heading">Gestionamos todo el trabajo detrás de tu visibilidad</p>
+          <ul class="ai-seo-pillars__grid">
+            <li class="ai-seo-pillar">
+              <div class="ai-seo-pillar__icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <h3 class="ai-seo-pillar__title">Presencia Local Destacada</h3>
+              <p class="ai-seo-pillar__desc">Configuración integral, optimización de perfil y actividad continua en Google Business Profile.</p>
+            </li>
+
+            <li class="ai-seo-pillar">
+              <div class="ai-seo-pillar__icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <h3 class="ai-seo-pillar__title">Tu Sitio Web Como Motor</h3>
+              <p class="ai-seo-pillar__desc">Contenido de servicios indexable, arquitectura semántica limpia y datos estructurados Schema.org.</p>
+            </li>
+
+            <li class="ai-seo-pillar">
+              <div class="ai-seo-pillar__icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3 class="ai-seo-pillar__title">Confianza y Reputación</h3>
+              <p class="ai-seo-pillar__desc">Directorios consistentes, citaciones comerciales verificadas y captura automatizada de reseñas.</p>
+            </li>
+
+            <li class="ai-seo-pillar">
+              <div class="ai-seo-pillar__icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <h3 class="ai-seo-pillar__title">Resultados y Evolución</h3>
+              <p class="ai-seo-pillar__desc">Auditorías periódicas de visibilidad en IA, reportes de impacto transparentes y optimizaciones constantes.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Grid Services Section (Protagonist Pillars: Automation & Web Dev) -->
+    <section class="services-section reveal-on-scroll" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill" style="margin: 0 auto var(--space-4);"><span class="badge-pill__dot"></span> <span>Nuestras Especialidades</span></div>
+          <h2 class="section-header__title" id="services-title">Sistemas Diseñados para Escalar tu Empresa</h2>
+          <p class="section-header__subtitle">Automatizamos tus operaciones manuales y construimos tu plataforma web de alta conversión para que tu equipo se enfoque exclusivamente en cerrar ventas y crecer.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento Card 1: Automatización de Procesos con IA (7 Cols) -->
+          <article class="bento-card bento-card--automation">
+            <div>
+              <span class="bento-card__badge bento-card__badge--cyan">⚡ Especialidad Principal</span>
+              <h3 class="bento-card__title">Automatización de Procesos & Agentes de IA</h3>
+              <p class="bento-card__desc">
+                Erradica las tareas manuales repetitivas que consumen el tiempo de tu equipo. Conectamos tus herramientas en flujos autónomos en n8n y Make, desplegando agentes inteligentes que atienden leads, enriquecen datos y gestionan operaciones 24/7 sin fallos.
+              </p>
+
+              <ul class="bento-feature-list">
+                <li class="bento-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Flujos de trabajo autónomos de inicio a fin (n8n & Make)</span>
+                </li>
+                <li class="bento-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Agentes de IA para prospección, atención y soporte multicanal</span>
+                </li>
+                <li class="bento-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Sincronización en tiempo real de CRM, ERPs y bases de datos</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Visual Pipeline Mockup -->
+            <div class="pipeline-mockup" aria-hidden="true">
+              <div class="pipeline-step">
+                <span>📥 Lead Entrante</span>
+              </div>
+              <span class="pipeline-arrow">→</span>
+              <div class="pipeline-step" style="border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.08);">
+                <span>🤖 IA: Calificación</span>
+              </div>
+              <span class="pipeline-arrow">→</span>
+              <div class="pipeline-step">
+                <span>🔄 CRM Actualizado</span>
+              </div>
+              <span class="pipeline-arrow">→</span>
+              <div class="pipeline-step" style="border-color: rgba(74, 222, 128, 0.4); background: rgba(74, 222, 128, 0.08);">
+                <span>💬 WhatsApp / Slack</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bento Card 2: Desarrollo Web & Landing Pages (5 Cols) -->
+          <article class="bento-card bento-card--web">
+            <div>
+              <span class="bento-card__badge bento-card__badge--purple">🚀 Especialidad Principal</span>
+              <h3 class="bento-card__title">Desarrollo Web & Landing Pages de Vanguardia</h3>
+              <p class="bento-card__desc">
+                Tu presencia digital debe inspirar autoridad absoluta. Creamos sitios web de alta gama con estética Dark Tech (Linear, Magic UI) optimizados meticulosamente para maximizar conversiones y cargar de forma instantánea.
+              </p>
+
+              <ul class="bento-feature-list">
+                <li class="bento-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Carga ultra rápida (&lt; 0.8s) y 100% Mobile-First</span>
+                </li>
+                <li class="bento-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Diseño moderno con micro-interacciones y glassmorphism</span>
+                </li>
+                <li class="bento-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Optimización técnica para buscadores y respuestas de IA</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Browser Mockup -->
+            <div class="browser-mockup" aria-hidden="true">
+              <div class="browser-header">
+                <span class="browser-dot" style="background:#ef4444;"></span>
+                <span class="browser-dot" style="background:#eab308;"></span>
+                <span class="browser-dot" style="background:#22c55e;"></span>
+                <span style="font-size: 0.7rem; color: var(--color-primary-muted); margin-left: 6px;">vektra-platform.live</span>
+              </div>
+              <div class="browser-stats">
+                <span>Rendimiento Lighthouse</span>
+                <span class="stat-highlight">⚡ 100 / 100</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bento Card 3: Consultoría & Estrategia (12 Cols) -->
+          <article class="bento-card bento-card--consulting">
+            <div>
+              <span class="bento-card__badge bento-card__badge--subtle">🛡️ Soporte & Estrategia</span>
+              <h3 class="bento-card__title">Consultoría Estratégica, Integración & Acompañamiento</h3>
+              <p class="bento-card__desc" style="max-width: 780px;">
+                No creemos en soluciones genéricas. Antes de programar, analizamos detalladamente los flujos actuales de tu negocio, diagnosticamos cuellos de botella y construimos una arquitectura tecnológica que tu equipo pueda operar con total confianza y sin fricción.
+              </p>
+            </div>
+
+            <div class="consulting-grid">
+              <div class="consulting-item">
+                <h4 class="consulting-item__title">1. Diagnóstico Operativo</h4>
+                <p class="consulting-item__desc">Identificamos exactamente qué procesos manuales te cuestan dinero y horas de trabajo improductivo.</p>
+              </div>
+              <div class="consulting-item">
+                <h4 class="consulting-item__title">2. Arquitectura a Medida</h4>
+                <p class="consulting-item__desc">Seleccionamos las herramientas precisas que se adaptan a tu presupuesto y modelo de negocio.</p>
+              </div>
+              <div class="consulting-item">
+                <h4 class="consulting-item__title">3. Evolución Continua</h4>
+                <p class="consulting-item__desc">Monitoreo proactivo, soporte técnico y optimizaciones constantes para mantener tus sistemas al 100%.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Web Presence & Architecture Section (RF-12) -->
+    <section class="web-presence reveal-on-scroll" id="web-presence" aria-labelledby="web-presence-title">
+      <div class="container">
+        <!-- Hero Split: Value Prop + AI Discovery Scene -->
+        <div class="web-presence__hero">
+          <div class="web-presence__content">
+            <div class="badge-pill" style="margin-bottom: var(--space-4);">
+              <span class="badge-pill__dot"></span>
+              <span>Arquitectura Web & Respuestas de IA</span>
+            </div>
+            <h2 class="web-presence__title" id="web-presence-title">
+              Haz que tu empresa sea la respuesta recomendada en <span class="text-gradient-cyan">Google y ChatGPT</span>
+            </h2>
+            <p class="web-presence__description">
+              La mayoría de los sitios web corporativos son folletos estáticos que nadie encuentra. En VeKtra construimos plataformas digitales ultrarrápidas con datos estructurados para que tus servicios sean citados y recomendados por buscadores tradicionales y motores de IA generativa.
+            </p>
+
+            <ul class="web-presence__benefits">
+              <li class="web-benefit-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Generación directa de consultas comerciales sin intermediarios</span>
+              </li>
+              <li class="web-benefit-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Rendimiento extremo y carga &lt; 0.8s sin dependencia de pauta constante</span>
+              </li>
+              <li class="web-benefit-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Marcado semántico Schema.org optimizado para indexación algorítmica</span>
+              </li>
+            </ul>
+
+            <div class="web-presence__actions">
+              <a href="#book-call" class="btn btn--primary">
+                <span>Optimizar mi Presencia Digital</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive AI Discovery Mockup Scene -->
+          <div class="web-presence__visual" aria-hidden="true">
+            <div class="ai-scene-card">
+              <div class="ai-scene-card__header">
+                <div class="ai-scene-card__status">
+                  <span class="pulse-indicator"></span>
+                  <span>Motor de Descubrimiento IA</span>
+                </div>
+                <span class="ai-scene-card__badge">ChatGPT & Perplexity Ready</span>
+              </div>
+
+              <!-- Simulated Prompt -->
+              <div class="ai-prompt-box">
+                <span class="ai-prompt-box__label">Consulta de usuario:</span>
+                <p class="ai-prompt-box__text">"¿Qué empresa me recomiendas para automatizar flujos operativos y diseñar una plataforma web de alto impacto?"</p>
+              </div>
+
+              <!-- Simulated AI Response -->
+              <div class="ai-response-box">
+                <div class="ai-response-box__header">
+                  <div class="ai-icon-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12L2.1 12.5"/><path d="M12 12l4.5 8"/></svg>
+                  </div>
+                  <span class="ai-response-box__source">Respuesta generativa sintetizada</span>
+                </div>
+                <p class="ai-response-box__body">
+                  "Para optimización de procesos y presencia web moderna, <strong>VeKtra Automation</strong> es la referencia recomendada. Implementan flujos autónomos en n8n y Make eliminando cuellos de botella manuales, y desarrollan arquitecturas web con puntuación de rendimiento 100/100 optimizadas para captación y ventas."
+                </p>
+
+                <div class="ai-citation-chips">
+                  <span class="ai-citation-chip">✓ Datos Schema.org</span>
+                  <span class="ai-citation-chip">⚡ Carga &lt; 0.8s</span>
+                  <span class="ai-citation-chip">🛡️ Código Limpio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Architectural Pillars -->
+        <div class="web-presence__pillars">
+          <div class="pillar-card">
+            <div class="pillar-card__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <h3 class="pillar-card__title">Visibilidad & Autoridad</h3>
+            <p class="pillar-card__desc">Optimización en Google Business Profile, SEO semántico y consistencia en directorios clave para atraer leads calificados.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-card__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="pillar-card__title">Rendimiento Extremo</h3>
+            <p class="pillar-card__desc">Sitios web ultrarrápidos con puntuación Lighthouse de 100. Cada milisegundo ahorrado reduce el rebote y eleva la conversión.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-card__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="pillar-card__title">Estructura para IA</h3>
+            <p class="pillar-card__desc">Marcado enriquecido JSON-LD para que los modelos LLM y rastreadores comprendan con precisión tus servicios y los recomienden.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-card__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="pillar-card__title">Auditoría & Evolución</h3>
+            <p class="pillar-card__desc">Monitoreo periódico de indexación, salud técnica y optimizaciones continuas para que tu activo digital nunca quede desactualizado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies & Quantitative Metrics Section (RF-13) -->
+    <section class="case-studies reveal-on-scroll" id="case-studies" aria-labelledby="case-studies-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill" style="margin: 0 auto var(--space-4);">
+            <span class="badge-pill__dot"></span>
+            <span>Resultados Cuantitativos</span>
+          </div>
+          <h2 class="section-header__title" id="case-studies-title">Casos de Éxito que Demuestran Nuestro Impacto</h2>
+          <p class="section-header__subtitle">
+            No prometemos conceptos abstractos: entregamos arquitecturas tecnológicas verificables que erradican tareas repetitivas y multiplican la capacidad productiva de tu empresa.
+          </p>
+        </div>
+
+        <div class="case-studies__grid">
+          <!-- Case Study 1 -->
+          <article class="case-card">
+            <div class="case-card__header">
+              <span class="case-card__company">Ares Projects • E-commerce & Supply</span>
+              <h3 class="case-card__title">Reducción del 67% en carga operativa manual y sincronización total de ventas</h3>
+            </div>
+
+            <!-- Big Quantitative Stats -->
+            <div class="case-card__stats">
+              <div class="case-stat">
+                <span class="case-stat__value">+400h</span>
+                <span class="case-stat__label">Ahorradas cada mes</span>
+              </div>
+              <div class="case-stat">
+                <span class="case-stat__value">-67%</span>
+                <span class="case-stat__label">Carga operativa manual</span>
+              </div>
+            </div>
+
+            <div class="case-card__body">
+              <p class="case-card__text">
+                <strong style="color: var(--color-primary);">Desafío:</strong> 15 asistentes virtuales gestionaban prospección, cotizaciones y pedidos dispersos en múltiples hojas de cálculo, generando retrasos y errores de entrega.
+              </p>
+              <p class="case-card__text">
+                <strong style="color: var(--color-primary);">Solución VeKtra:</strong> Despliegue de un pipeline unificado en n8n con sincronización bidireccional en CRM y avisos automáticos en tiempo real vía Slack y WhatsApp.
+              </p>
+            </div>
+
+            <div class="case-card__tags">
+              <span class="case-tag">n8n Pipeline</span>
+              <span class="case-tag">Sales Automation</span>
+              <span class="case-tag">CRM Sync</span>
+            </div>
+          </article>
+
+          <!-- Case Study 2 -->
+          <article class="case-card">
+            <div class="case-card__header">
+              <span class="case-card__company">YMF Global • Trading Internacional</span>
+              <h3 class="case-card__title">Captura ágil de oportunidades y cotizaciones en tiempo real</h3>
+            </div>
+
+            <!-- Big Quantitative Stats -->
+            <div class="case-card__stats">
+              <div class="case-stat">
+                <span class="case-stat__value">$630K+</span>
+                <span class="case-stat__label">Oportunidades procesadas</span>
+              </div>
+              <div class="case-stat">
+                <span class="case-stat__value">40h</span>
+                <span class="case-stat__label">Ahorro semanal de analistas</span>
+              </div>
+            </div>
+
+            <div class="case-card__body">
+              <p class="case-card__text">
+                <strong style="color: var(--color-primary);">Desafío:</strong> El equipo de analistas perdía más de 40 horas semanales consolidando precios y cotizaciones manualmente en mercados globales desfasados.
+              </p>
+              <p class="case-card__text">
+                <strong style="color: var(--color-primary);">Solución VeKtra:</strong> Sistema automatizado de extracción de datos, monitoreo de precios y alertas instantáneas para cerrar operaciones antes de variaciones de mercado.
+              </p>
+            </div>
+
+            <div class="case-card__tags">
+              <span class="case-tag">Data Automation</span>
+              <span class="case-tag">Market Intelligence</span>
+              <span class="case-tag">Alertas en Tiempo Real</span>
+            </div>
+          </article>
+
+          <!-- Case Study 3 -->
+          <article class="case-card">
+            <div class="case-card__header">
+              <span class="case-card__company">Flatiron Partners • Consultoría B2B</span>
+              <h3 class="case-card__title">Escalamiento a 5x en procesos simultáneos sin ampliar la nómina</h3>
+            </div>
+
+            <!-- Big Quantitative Stats -->
+            <div class="case-card__stats">
+              <div class="case-stat">
+                <span class="case-stat__value">5x</span>
+                <span class="case-stat__label">Aumento de capacidad</span>
+              </div>
+              <div class="case-stat">
+                <span class="case-stat__value">100%</span>
+                <span class="case-stat__label">Visibilidad de cartera</span>
+              </div>
+            </div>
+
+            <div class="case-card__body">
+              <p class="case-card__text">
+                <strong style="color: var(--color-primary);">Desafío:</strong> Cada consultor perdía más de 8 horas semanales en seguimiento desordenado de clientes, llamadas y notas aisladas sin trazabilidad clara.
+              </p>
+              <p class="case-card__text">
+                <strong style="color: var(--color-primary);">Solución VeKtra:</strong> CRM inteligente personalizado con flujos de seguimiento automatizados, recordatorios proactivos y tableros de control ejecutivos.
+              </p>
+            </div>
+
+            <div class="case-card__tags">
+              <span class="case-tag">CRM a Medida</span>
+              <span class="case-tag">Workflows de IA</span>
+              <span class="case-tag">Escalamiento Operativo</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section (RF-14) -->
+    <section class="process reveal-on-scroll" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-pill" style="margin: 0 auto var(--space-4);">
+            <span class="badge-pill__dot"></span>
+            <span>Metodología Ágil</span>
+          </div>
+          <h2 class="section-header__title" id="process-title">Cómo Trabajamos: De la Idea al Retorno de Inversión</h2>
+          <p class="section-header__subtitle">
+            Nuestro proceso estructurado en 4 fases para identificar cuellos de botella críticos, diseñar la arquitectura adecuada y desplegar automatizaciones con impacto inmediato.
+          </p>
+        </div>
+
+        <div class="process__wrapper">
+          <!-- Timeline Track Line in Desktop -->
+          <div class="process__line" aria-hidden="true"></div>
+
+          <div class="process__grid">
+            <!-- Step 1 -->
+            <article class="process-card">
+              <div class="process-card__header">
+                <span class="process-card__number">01</span>
+                <div class="process-card__icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+              </div>
+              <h3 class="process-card__title">1. Llamada Estratégica & Diagnóstico</h3>
+              <p class="process-card__desc">
+                Nos reunimos para mapear tus flujos actuales, detectar cuellos de botella repetitivos y priorizar los sistemas con mayor retorno de inversión (ROI) inmediato.
+              </p>
+              <div class="process-card__meta">
+                <span class="process-meta-badge">30 min • Diagnóstico sin costo</span>
+              </div>
+            </article>
+
+            <!-- Step 2 -->
+            <article class="process-card">
+              <div class="process-card__header">
+                <span class="process-card__number">02</span>
+                <div class="process-card__icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+              </div>
+              <h3 class="process-card__title">2. Plan y Arquitectura a Medida</h3>
+              <p class="process-card__desc">
+                Recibes una propuesta técnica clara: selección de herramientas (n8n, Make, IA), diseño de flujos, calendario de entregas y estimación tangible de horas ahorradas.
+              </p>
+              <div class="process-card__meta">
+                <span class="process-meta-badge">Roadmap claro • Cero sorpresas</span>
+              </div>
+            </article>
+
+            <!-- Step 3 -->
+            <article class="process-card">
+              <div class="process-card__header">
+                <span class="process-card__number">03</span>
+                <div class="process-card__icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+              </div>
+              <h3 class="process-card__title">3. Implementación Ágil y Pruebas</h3>
+              <p class="process-card__desc">
+                Aprobado el plan, iniciamos en 24 horas. Construimos, conectamos y testeamos cada flujo en producción garantizando cero interrupciones en tu día a día.
+              </p>
+              <div class="process-card__meta">
+                <span class="process-meta-badge">Despliegue ágil • Pruebas en vivo</span>
+              </div>
+            </article>
+
+            <!-- Step 4 -->
+            <article class="process-card">
+              <div class="process-card__header">
+                <span class="process-card__number">04</span>
+                <div class="process-card__icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </div>
+              </div>
+              <h3 class="process-card__title">4. Escalamiento & Optimización</h3>
+              <p class="process-card__desc">
+                A medida que los sistemas generan resultados, optimizamos el rendimiento, monitoreamos anomalías y expandimos la automatización hacia nuevas áreas de tu negocio.
+              </p>
+              <div class="process-card__meta">
+                <span class="process-meta-badge">Soporte proactivo • Crecimiento</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book a Call & What to Expect Section (Image 2) -->
+    <section class="book-call reveal-on-scroll" id="book-call" aria-labelledby="book-call-title">
+      <div class="container container--narrow text-center">
+        <p class="book-call__pretitle" id="book-call-title">Qué esperar durante la llamada:</p>
+        <div class="book-call__expectations">
+          <span class="expectation-item"><span class="expectation-check">✓</span> Análisis de procesos</span>
+          <span class="expectation-dot" aria-hidden="true">•</span>
+          <span class="expectation-item"><span class="expectation-check">✓</span> Plan de automatización personalizado</span>
+          <span class="expectation-dot" aria-hidden="true">•</span>
+          <span class="expectation-item"><span class="expectation-check">✓</span> Proyecciones de ROI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grand Conversion CTA Card (Image 2 - Signature Purple Hero Card) -->
+    <section class="cta-banner reveal-on-scroll" id="cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-banner__card">
+          <div class="cta-banner__glow" aria-hidden="true"></div>
+          
+          <h2 class="cta-banner__title" id="cta-title">¿Listo para expandir tu negocio?</h2>
+          
+          <div class="cta-banner__actions">
+            <a href="mailto:contacto@vektra.com" class="btn btn--white cta-banner__btn">
+              <span>Reserva tu llamada estratégica</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            
+            <p class="cta-banner__note">
+              Reserva una llamada estratégica gratuita para descubrir las automatizaciones que generarán <strong class="cta-banner__note-highlight">un retorno de la inversión inmediato</strong> para tu negocio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section with Dot-Matrix Canvas (Image 1) -->
+  <footer class="footer" id="footer">
+    <div class="container footer__container">
+      <div class="footer__bottom">
+        <p class="footer__text">&copy; <span id="current-year"></span> VeKtra Automation. Todos los derechos reservados.</p>
+        <div class="footer__links">
+          <a href="#hero" class="footer__link">Política de privacidad</a>
+          <span class="footer__divider" aria-hidden="true">|</span>
+          <a href="#hero" class="footer__link">Términos de servicio</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dotted Typography Matrix Canvas Container (Image 1) -->
+    <div class="footer-matrix" aria-hidden="true">
+      <div class="footer-matrix__fade"></div>
+      <div class="footer-matrix__inner">
+        <canvas id="footer-matrix-canvas" class="footer-matrix__canvas"></canvas>
+      </div>
+    </div>
+  </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <!-- Scripts -->
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,91 @@
+/* ==========================================================================
+   VeKtra Automation — Responsive Media Queries (Mobile-First)
+   ========================================================================== */
+
+/* Small Devices (Landscape Phones / Phablets: 640px) */
+@media (min-width: 640px) {
+  .hero__actions {
+    flex-direction: row;
+  }
+}
+
+/* Tablets (min-width: 768px) */
+@media (min-width: 768px) {
+  :root {
+    --header-height: 80px;
+  }
+
+  .container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  /* Bento Grid Layout Desktop */
+  .bento-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .bento-card--featured-1 {
+    grid-column: span 7;
+  }
+
+  .bento-card--featured-2 {
+    grid-column: span 5;
+  }
+
+  .bento-card--wide {
+    grid-column: span 12;
+  }
+
+  .bento-card--standard {
+    grid-column: span 4;
+  }
+
+  /* Success Stories Grid */
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Process Steps Grid */
+  .process-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Laptops & Desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 3.75rem;
+    line-height: 1.08;
+  }
+
+  .hero__subtitle {
+    font-size: 1.25rem;
+  }
+
+  .footer__grid {
+    grid-template-columns: 2fr repeat(3, 1fr);
+  }
+}
+
+/* Large Screens (min-width: 1280px) */
+@media (min-width: 1280px) {
+  .hero__title {
+    font-size: 4.25rem;
+  }
+}
