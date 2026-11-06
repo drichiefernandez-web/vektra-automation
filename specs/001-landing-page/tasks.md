@@ -32,7 +32,7 @@
   - Incorporar la sección de visibilidad y posicionamiento con lienzo radar SVG (`.visibility-scene`), tarjeta flotante de búsqueda local, pin central palpitante, tarjeta de descubrimiento por IA y 4 pilares de posicionamiento.
   - Hecho cuando: La sección `#ai-seo` esté integrada en la navegación fija, responda fluidamente en móvil y escritorio, y replique con fidelidad el diseño de referencia.
 
-- [ ] **T8. Acordeón interactivo de Preguntas Frecuentes (FAQ).** RF-15, RF-16, RF-17
+- [x] **T8. Acordeón interactivo de Preguntas Frecuentes (FAQ).** RF-15, RF-16, RF-17
   - Maquetar las preguntas frecuentes adaptadas a VeKtra y programar en `js/main.js` el despliegue/cierre suave con rotación de chevrons.
   - Hecho cuando: Al hacer clic en una pregunta se expanda suavemente su respuesta y al hacer clic de nuevo o en otra se contraiga sin saltos bruscos.
 

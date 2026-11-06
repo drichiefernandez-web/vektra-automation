@@ -108,5 +108,78 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+
+  // Interactive FAQ Accordion (Task 8 - RF-15, RF-16, RF-17)
+  const faqItems = document.querySelectorAll("[data-faq-item]");
+  if (faqItems.length > 0) {
+    faqItems.forEach((item) => {
+      const trigger = item.querySelector(".faq-trigger");
+      const content = item.querySelector(".faq-content");
+      if (!trigger || !content) return;
+
+      const toggleItem = (open) => {
+        const isOpen = typeof open === "boolean" ? open : !item.classList.contains("faq-item--open");
+
+        if (isOpen) {
+          // Close other open items for a smooth single-panel accordion experience
+          faqItems.forEach((other) => {
+            if (other !== item && other.classList.contains("faq-item--open")) {
+              const otherTrigger = other.querySelector(".faq-trigger");
+              const otherContent = other.querySelector(".faq-content");
+              if (otherTrigger && otherContent) {
+                other.classList.remove("faq-item--open");
+                otherTrigger.setAttribute("aria-expanded", "false");
+                otherContent.style.maxHeight = null;
+                setTimeout(() => {
+                  if (!other.classList.contains("faq-item--open")) {
+                    otherContent.hidden = true;
+                  }
+                }, 350);
+              }
+            }
+          });
+
+          content.hidden = false;
+          item.classList.add("faq-item--open");
+          trigger.setAttribute("aria-expanded", "true");
+          // Calculate natural height dynamically
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          item.classList.remove("faq-item--open");
+          trigger.setAttribute("aria-expanded", "false");
+          content.style.maxHeight = null;
+          setTimeout(() => {
+            if (!item.classList.contains("faq-item--open")) {
+              content.hidden = true;
+            }
+          }, 350);
+        }
+      };
+
+      trigger.addEventListener("click", () => {
+        toggleItem();
+      });
+
+      // Keyboard accessibility (Enter and Space)
+      trigger.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleItem();
+        }
+      });
+    });
+
+    // Recalculate max-height on window resize if an item is open
+    window.addEventListener("resize", () => {
+      faqItems.forEach((item) => {
+        if (item.classList.contains("faq-item--open")) {
+          const content = item.querySelector(".faq-content");
+          if (content) {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        }
+      });
+    });
+  }
 });
 
