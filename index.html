@@ -173,7 +173,7 @@
         <div class="marquee-track">
           <!-- Loop 1 -->
           <div class="tech-logo">
-            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M21.474 5.684a2.53 2.53 0 0 0-2.447 1.895H16.13a2.526 2.526 0 0 0-2.492 2.11l-.103.624a1.26 1.26 0 0 1-1.246 1.055h-1.001a2.527 2.527 0 0 0-4.893 0H4.973a2.527 2.527 0 1 0 0 1.264h1.422a2.527 2.527 0 0 0 4.894 0h1a1.26 1.26 0 0 1 1.247 1.055l.103.623a2.526 2.526 0 0 0 2.492 2.111h.37a2.527 2.527 0 1 0 0 1.264h-.37a3.79 3.79 0 0 1-3.738-3.167l-.103-.623a2.527 2.527 0 0 0-2.494-2.111H6.395a3.791 3.791 0 1 1 0-1.264h3.978a2.527 2.527 0 0 0 2.494-2.11l.103-.624a3.79 3.79 0 0 1 3.738-3.166h2.897a3.79 3.79 0 1 1 3.67-2.895"/></svg>
             <span class="tech-logo__name">n8n Automation</span>
           </div>
           <div class="tech-logo">
@@ -215,7 +215,7 @@
 
           <!-- Loop 2 (Duplicate for continuous 60fps loop) -->
           <div class="tech-logo" aria-hidden="true">
-            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <svg class="tech-logo__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M21.474 5.684a2.53 2.53 0 0 0-2.447 1.895H16.13a2.526 2.526 0 0 0-2.492 2.11l-.103.624a1.26 1.26 0 0 1-1.246 1.055h-1.001a2.527 2.527 0 0 0-4.893 0H4.973a2.527 2.527 0 1 0 0 1.264h1.422a2.527 2.527 0 0 0 4.894 0h1a1.26 1.26 0 0 1 1.247 1.055l.103.623a2.526 2.526 0 0 0 2.492 2.111h.37a2.527 2.527 0 1 0 0 1.264h-.37a3.79 3.79 0 0 1-3.738-3.167l-.103-.623a2.527 2.527 0 0 0-2.494-2.111H6.395a3.791 3.791 0 1 1 0-1.264h3.978a2.527 2.527 0 0 0 2.494-2.11l.103-.624a3.79 3.79 0 0 1 3.738-3.166h2.897a3.79 3.79 0 1 1 3.67-2.895"/></svg>
             <span class="tech-logo__name">n8n Automation</span>
           </div>
           <div class="tech-logo" aria-hidden="true">
@@ -451,7 +451,9 @@
         <div class="bento-grid">
           <!-- Bento Card 1: Automatización de Procesos con IA (7 Cols) -->
           <article class="bento-card bento-card--automation">
-            <div>
+            <div class="bento-card__glow" aria-hidden="true"></div>
+            <div class="bento-card__spotlight-border" aria-hidden="true"></div>
+            <div class="bento-card__inner">
               <span class="bento-card__badge bento-card__badge--cyan">⚡ Especialidad Principal</span>
               <h3 class="bento-card__title">Automatización de Procesos & Agentes de IA</h3>
               <p class="bento-card__desc">
@@ -474,29 +476,33 @@
               </ul>
             </div>
 
-            <!-- Visual Pipeline Mockup -->
-            <div class="pipeline-mockup" aria-hidden="true">
-              <div class="pipeline-step">
-                <span>📥 Lead Entrante</span>
-              </div>
-              <span class="pipeline-arrow">→</span>
-              <div class="pipeline-step" style="border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.08);">
-                <span>🤖 IA: Calificación</span>
-              </div>
-              <span class="pipeline-arrow">→</span>
-              <div class="pipeline-step">
-                <span>🔄 CRM Actualizado</span>
-              </div>
-              <span class="pipeline-arrow">→</span>
-              <div class="pipeline-step" style="border-color: rgba(74, 222, 128, 0.4); background: rgba(74, 222, 128, 0.08);">
-                <span>💬 WhatsApp / Slack</span>
+            <!-- n8n Automation Engine Showcase -->
+            <div class="n8n-showcase" aria-hidden="true">
+              <div class="n8n-showcase__content">
+                <div class="n8n-showcase__left">
+                  <div class="n8n-showcase__logo-box">
+                    <svg class="n8n-logo-svg" viewBox="0 0 24 24" fill="none">
+                      <path fill="#EA4B71" d="M21.474 5.684a2.53 2.53 0 0 0-2.447 1.895H16.13a2.526 2.526 0 0 0-2.492 2.11l-.103.624a1.26 1.26 0 0 1-1.246 1.055h-1.001a2.527 2.527 0 0 0-4.893 0H4.973a2.527 2.527 0 1 0 0 1.264h1.422a2.527 2.527 0 0 0 4.894 0h1a1.26 1.26 0 0 1 1.247 1.055l.103.623a2.526 2.526 0 0 0 2.492 2.111h.37a2.527 2.527 0 1 0 0 1.264h-.37a3.79 3.79 0 0 1-3.738-3.167l-.103-.623a2.527 2.527 0 0 0-2.494-2.111H6.395a3.791 3.791 0 1 1 0-1.264h3.978a2.527 2.527 0 0 0 2.494-2.11l.103-.624a3.79 3.79 0 0 1 3.738-3.166h2.897a3.79 3.79 0 1 1 3.67-2.895"/>
+                    </svg>
+                  </div>
+                  <div class="n8n-showcase__text">
+                    <span class="n8n-showcase__brand-name">n8n Workflow Engine</span>
+                    <span class="n8n-showcase__tagline">Flujos inteligentes autónomos sin fallos</span>
+                  </div>
+                </div>
+                <div class="n8n-showcase__status">
+                  <span class="status-pulse-dot"></span>
+                  <span>Activo 24/7</span>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- Bento Card 2: Desarrollo Web & Landing Pages (5 Cols) -->
           <article class="bento-card bento-card--web">
-            <div>
+            <div class="bento-card__glow" aria-hidden="true"></div>
+            <div class="bento-card__spotlight-border" aria-hidden="true"></div>
+            <div class="bento-card__inner">
               <span class="bento-card__badge bento-card__badge--purple">🚀 Especialidad Principal</span>
               <h3 class="bento-card__title">Desarrollo Web & Landing Pages de Vanguardia</h3>
               <p class="bento-card__desc">
@@ -536,7 +542,9 @@
 
           <!-- Bento Card 3: Consultoría & Estrategia (12 Cols) -->
           <article class="bento-card bento-card--consulting">
-            <div>
+            <div class="bento-card__glow" aria-hidden="true"></div>
+            <div class="bento-card__spotlight-border" aria-hidden="true"></div>
+            <div class="bento-card__inner">
               <span class="bento-card__badge bento-card__badge--subtle">🛡️ Soporte & Estrategia</span>
               <h3 class="bento-card__title">Consultoría Estratégica, Integración & Acompañamiento</h3>
               <p class="bento-card__desc" style="max-width: 780px;">

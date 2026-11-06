@@ -23,5 +23,25 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   animatedElements.forEach((el) => observer.observe(el));
+
+  // Bento Cards Cursor Spotlight & Dynamic Glow Light Effect
+  const bentoCards = document.querySelectorAll(".bento-card");
+  bentoCards.forEach((card) => {
+    const handleMove = (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    };
+
+    const handleLeave = () => {
+      card.style.removeProperty("--mouse-x");
+      card.style.removeProperty("--mouse-y");
+    };
+
+    card.addEventListener("pointermove", handleMove);
+    card.addEventListener("pointerleave", handleLeave);
+  });
 });
 
