@@ -1142,35 +1142,53 @@ html.light .hero__title {
 .bento-card__badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  margin-bottom: 1.35rem; /* Separación y armonía visual amplia con el título */
+  justify-content: center;
+  margin-bottom: 1.35rem; /* Separación y armonía visual con el título */
   font-size: 0.72rem;
-  padding: 0.35rem 0.85rem;
+  padding: 0.35rem 0.9rem;
   border-radius: 9999px;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   backdrop-filter: blur(8px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
 .bento-card__badge--cyan {
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(56, 189, 248, 0.08);
   color: var(--color-accent-cyan);
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.28);
 }
 
 .bento-card__badge--purple {
-  background: rgba(168, 85, 247, 0.12);
+  background: rgba(168, 85, 247, 0.08);
   color: #c084fc;
-  border: 1px solid rgba(168, 85, 247, 0.35);
-  box-shadow: 0 0 14px rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.28);
 }
 
 .bento-card__badge--subtle {
   background: rgba(255, 255, 255, 0.05);
   color: var(--color-primary-muted);
   border: 1px solid var(--border-subtle);
+}
+
+/* On Card Hover: Highlight Especialidad Principal badge with vibrant yellow / golden light */
+.bento-card:hover .bento-card__badge {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fef08a;
+  border-color: rgba(251, 191, 36, 0.75);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.45), 0 0 35px rgba(251, 191, 36, 0.22);
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
+  transform: translateY(-1px) scale(1.02);
+}
+
+html.light .bento-card:hover .bento-card__badge {
+  background: rgba(245, 158, 11, 0.14);
+  color: #b45309;
+  border-color: rgba(245, 158, 11, 0.7);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.3);
+  text-shadow: none;
 }
 
 .bento-card__title {
@@ -1245,8 +1263,8 @@ html.light .hero__title {
 }
 
 .n8n-showcase__logo-box {
-  width: 44px;
-  height: 44px;
+  width: 54px;
+  height: 38px;
   border-radius: 10px;
   background: rgba(234, 75, 113, 0.12);
   border: 1px solid rgba(234, 75, 113, 0.32);
@@ -1255,11 +1273,12 @@ html.light .hero__title {
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 0 16px rgba(234, 75, 113, 0.22);
+  padding: 4px;
 }
 
 .n8n-logo-svg {
-  width: 26px;
-  height: 26px;
+  width: 38px;
+  height: 20px;
   display: block;
 }
 
