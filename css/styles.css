@@ -50,6 +50,7 @@
   --space-4: 1rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
+  --space-10: 2.5rem;
   --space-12: 3rem;
   --space-16: 4rem;
   --space-24: 6rem;
@@ -781,18 +782,12 @@ html.light .nav__toggle {
   top: 0;
   left: 0;
   right: 0;
-  height: 520px;
+  bottom: 0;
   background: radial-gradient(125% 125% at 50% 10%, #09090b 40%, rgba(112, 71, 235, 0.55) 100%);
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
   pointer-events: none;
   z-index: 0;
-}
-
-@media (min-width: 768px) {
-  .hero__gradient {
-    height: 640px;
-  }
 }
 
 .hero__container {
@@ -854,7 +849,7 @@ html.light .hero__title {
 .hero__actions {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-4);
   width: 100%;
   max-width: 440px;
   margin-bottom: var(--space-10);
@@ -865,6 +860,8 @@ html.light .hero__title {
     flex-direction: row;
     justify-content: center;
     max-width: none;
+    gap: var(--space-4);
+    margin-bottom: var(--space-12);
   }
 }
 
@@ -873,28 +870,38 @@ html.light .hero__title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-2);
+  gap: 0.65rem;
+  position: relative;
+  z-index: 10;
 }
 
 .avatar-cluster {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 
 .avatar-item {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid var(--bg-main);
-  margin-left: -12px;
-  background-size: cover;
-  background-position: center;
+  border: 2px solid #09090b;
+  margin-left: -10px;
+  object-fit: cover;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), z-index 0.2s ease;
+  position: relative;
+}
+
+.avatar-item:hover {
+  transform: translateY(-3px) scale(1.12);
+  z-index: 20;
 }
 
 .avatar-item:first-child {
@@ -904,28 +911,47 @@ html.light .hero__title {
 .avatar-item--count {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(8px);
-  border-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: rgba(255, 255, 255, 0.25);
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
+  cursor: default;
+}
+
+html.light .avatar-item {
+  border-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+html.light .avatar-item--count {
+  background: rgba(112, 71, 235, 0.12);
+  border-color: rgba(112, 71, 235, 0.25);
+  color: #5b21b6;
 }
 
 .rating-stars {
   display: flex;
-  gap: 3px;
-  color: var(--color-accent-amber);
+  gap: 4px;
+  color: #fbbf24;
+  margin-top: 0.25rem;
 }
 
 .rating-stars svg {
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   fill: currentColor;
 }
 
 .social-proof__caption {
   font-size: 0.875rem;
   color: var(--color-primary-muted);
-  font-weight: 400;
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+
+html.light .social-proof__caption {
+  color: #64748b;
 }
 
 /* ==========================================================================
