@@ -44,6 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleMenu(false);
       }
     });
+
+    // Close mobile menu on desktop viewport resize
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 900 && navMobile.classList.contains("nav__mobile--open")) {
+        toggleMenu(false);
+      }
+    });
   }
 
   // Header background transition and ScrollSpy active nav tracking on scroll

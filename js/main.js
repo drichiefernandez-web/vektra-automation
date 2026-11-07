@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       offCanvas.height = height;
       const offCtx = offCanvas.getContext("2d");
 
-      // Adaptive font sizing based on container width
-      const fontSize = Math.max(26, Math.min(width / 17, 72));
+      // Adaptive font sizing based on container width (mobile safe)
+      const fontSize = Math.max(16, Math.min(width / 21, 72));
       offCtx.font = `800 ${fontSize}px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
       offCtx.textAlign = "center";
       offCtx.textBaseline = "middle";
