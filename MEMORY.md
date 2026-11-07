@@ -3,22 +3,21 @@
 Memoria persistente del proyecto entre sesiones. Máximo ~50 líneas.
 
 ## Estado actual
-- **Hero & Prueba Social (#hero)**: Corregido el colapso vertical entre botones CTA y avatares (añadido token CSS `--space-10: 2.5rem;` y `margin-bottom: 3rem;` en desktop). Reemplazados los 4 iconos vectoriales genéricos por 7 avatares fotográficos reales de fundadores/ejecutivos alojados localmente en `assets/images/avatars/`, píldora frosted `+93`, 5 estrellas doradas y espaciado armónico idéntico a PulpSense.
-- **Ecosistema & Tecnologías (#social-proof)**: Doble carrusel infinito en direcciones opuestas (Dual Marquee) con logos HD oficiales + etiquetas. Fila superior a 42s hacia la izquierda; Fila inferior a 46s hacia la derecha. Duplicado para ciclo continuo a 60fps sin saltos.
-- **Ecosistema & Conectividad (#integrations)**: Carrusel de 2 pistas con tarjetas squircle (72x72px) con los mismos vectores HD oficiales.
-- **Sección Especialidades (#services)**: Isotipo oficial n8n en `#EA4B71`, badges sin emojis con iluminación ámbar `#fef08a` al hover y efecto spotlight dinámico.
-- **Posicionamiento B2B y B2C**: Textos alineados en FAQ, hero y sección IA SEO.
-- **Botones de contacto**: Enlazados a WhatsApp (`https://wa.me/qr/I5IDYKKL3XVNI1`).
+- **Optimización Móvil (375px / 360px)**: Adaptación completa y fluida sin desbordamiento horizontal (`scrollWidth === clientWidth`). Header flotante optimizado (oculta CTA redundante en móviles `<640px` priorizando el menú y drawer), tipografía fluida con `clamp()`, botones táctiles de 46-48px de alto y paddings reducidos en cards, Bento grid y acordeón FAQ.
+- **Hero & Prueba Social (#hero)**: 7 avatares fotográficos reales de fundadores locales, píldora frosted `+93`, 5 estrellas doradas y espaciado armónico. Botones CTA apilados verticalmente en móvil a ancho completo.
+- **Dual Marquees (#social-proof & #integrations)**: Logos SVG HD oficiales con máscaras laterales adaptadas para pantallas pequeñas (60fps continuos sin cortes).
+- **Especialidades (#services)**: Isotipo oficial n8n en `#EA4B71`, badges sin emojis con iluminación ámbar `#fef08a` al hover y spotlight cursor.
+- **Posicionamiento y Contacto**: Textos B2B y B2C unificados; 6 botones CTA apuntan al WhatsApp `https://wa.me/qr/I5IDYKKL3XVNI1`.
 - Servidor de previsualización local activo en `http://localhost:3000/`.
 
 ## Decisiones (y por qué)
-- **Avatares fotográficos reales locales**: Transmiten credibilidad y autoridad inmediata frente a siluetas vectoriales genéricas, almacenados localmente para funcionamiento 100% offline (`file://`).
-- **Definición de `--space-10` en `:root`**: Resuelve la causa raíz del solapamiento donde `margin-bottom: var(--space-10)` era tratado como 0 por el navegador.
+- **Header móvil simplificado**: En pantallas `< 640px` se oculta el botón "Agendar Llamada" de la barra fija para evitar comprimir el logotipo y los controles. El usuario dispone de dicho CTA en el menú hamburguesa desplegable y en el Hero.
+- **Dimensionamiento seguro en Canvas dot-matrix**: Fórmula dinámica `Math.max(16, Math.min(width / 21, 72))` que previene cortes o desbordamientos del texto en el footer en pantallas de 320px–375px.
 
 ## Aprendizajes y errores a evitar
-- Verificar siempre que cualquier variable CSS usada (`--space-XX`) esté declarada en `:root`.
-- Los elementos `<span>` ignoran `margin-bottom`; siempre usar `display: inline-flex` en badges.
-- En PowerShell de Windows, evitar comillas dobles complejas con `node -e`; usar scripts en `scratch/`.
+- Usar siempre fallback `overflow-x: hidden;` antes de `overflow-x: clip;` para compatibilidad móvil multiplataforma.
+- Los elementos de acción táctil en móvil deben tener un objetivo mínimo de 44x44px.
+- En PowerShell, evitar cadenas `&&`; usar `;` o comandos independientes.
 
 ## Próximos pasos
 - Tarea T9: Muro de Testimonios y valoraciones de clientes.
