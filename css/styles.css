@@ -24,6 +24,7 @@
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-card: #27272a;
   --border-focus: rgba(179, 149, 255, 0.5);
+  --border-active: rgba(112, 71, 235, 0.45);
 
   /* Shadows & Highlights */
   --shadow-inset-button: inset 0 1px 2px rgba(255, 255, 255, 0.25),
@@ -48,11 +49,13 @@
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
+  --space-5: 1.25rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
   --space-10: 2.5rem;
   --space-12: 3rem;
   --space-16: 4rem;
+  --space-20: 5rem;
   --space-24: 6rem;
 
   /* Transitions */
@@ -84,6 +87,7 @@ html.light {
   --border-subtle: rgba(0, 0, 0, 0.08);
   --border-card: rgba(0, 0, 0, 0.1);
   --border-focus: rgba(112, 71, 235, 0.5);
+  --border-active: rgba(112, 71, 235, 0.35);
 
   --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
   --shadow-glow: 0 0 25px rgba(112, 71, 235, 0.15);
@@ -304,22 +308,39 @@ html.light .badge-pill {
 /* Section Header Shared Component */
 .section-header {
   text-align: center;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-10);
+  position: relative;
+  z-index: 2;
+}
+
+.section-header .badge-pill,
+.section-header__badge {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: var(--space-5) !important;
 }
 
 .section-header__title {
   font-size: clamp(1.85rem, 4vw, 2.75rem);
-  margin-top: var(--space-3);
-  margin-bottom: var(--space-3);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: 1.22;
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  color: #ffffff;
+}
+
+html.light .section-header__title {
+  color: #0f172a;
 }
 
 .section-header__subtitle {
   color: var(--color-primary-muted);
   font-size: clamp(1rem, 1.5vw, 1.125rem);
-  max-width: 600px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* Links & Accessibility */
@@ -1053,9 +1074,10 @@ html.light .tech-logo:hover {
    ========================================================================== */
 
 .services-section {
-  padding: var(--space-20) 0 var(--space-24);
+  padding: 4.5rem 0 5rem;
   position: relative;
   width: 100%;
+  border-top: 1px solid var(--border-subtle);
   overflow: hidden;
 }
 
@@ -1483,7 +1505,7 @@ html.light .bento-card:hover .bento-card__badge {
    ========================================================================== */
 
 .web-presence {
-  padding: var(--space-24) 0;
+  padding: 4.5rem 0 3.5rem;
   position: relative;
   border-top: 1px solid var(--border-subtle);
   background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(56, 189, 248, 0.04) 0%, transparent 100%);
@@ -1759,7 +1781,7 @@ html.light .bento-card:hover .bento-card__badge {
    ========================================================================== */
 
 .case-studies {
-  padding: var(--space-24) 0;
+  padding: 3.5rem 0 4.5rem;
   position: relative;
   border-top: 1px solid var(--border-subtle);
   background: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(99, 102, 241, 0.05) 0%, transparent 100%);
@@ -1769,7 +1791,7 @@ html.light .bento-card:hover .bento-card__badge {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
-  margin-top: var(--space-12);
+  margin-top: var(--space-6);
 }
 
 @media (min-width: 1024px) {
@@ -2522,7 +2544,7 @@ html.light .faq-content__inner {
    ========================================================================== */
 
 .ai-seo-section {
-  padding: var(--space-20) 0;
+  padding: 4.5rem 0 3.5rem;
   position: relative;
   background-color: var(--bg-main);
   border-top: 1px solid var(--border-subtle);
@@ -2531,7 +2553,7 @@ html.light .faq-content__inner {
 
 @media (min-width: 768px) {
   .ai-seo-section {
-    padding: var(--space-24) 0;
+    padding: 5rem 0 4rem;
   }
 }
 
