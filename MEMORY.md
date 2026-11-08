@@ -19,4 +19,4 @@ Memoria persistente del proyecto entre sesiones. Máximo ~50 líneas.
 - Vincular el repositorio en Vercel Git Settings activa despliegues automáticos con cero configuración en cada push a `main`.
 
 ## Próximos pasos
-- Ejecutar el empuje interactivo con Git Credential Manager y vincular GitHub en la pestaña Git de Vercel.
+- Ejecutar DESPLEGAR.bat para autorizar la sincronización inicial de Git y verificar producción en Vercel.
